@@ -1,4 +1,4 @@
-package com.example.kw_favorite.Library;
+package com.example.kw_favorite.library;
 
 import androidx.appcompat.app.AppCompatActivity;
 

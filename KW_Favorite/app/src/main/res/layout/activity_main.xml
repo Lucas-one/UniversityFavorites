@@ -35,81 +35,103 @@
             android:layout_width="400dp"
             android:layout_height="100dp"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="5">
             <Button
                 android:id="@+id/btnLibrary"
+                android:background="#480000"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_weight="1"
-                android:text="도서관" />
+                android:layout_weight="2"
+                android:textAllCaps="false"
+                android:text="Library"
+                android:textSize="20dp"
+                />
 
             <Button
                 android:id="@+id/btnUniversityNotice"
+                android:background="#4B2866"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_weight="1"
-                android:text="대학 홈페이지" />
+                android:layout_weight="3"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="University" />
         </LinearLayout>
         <LinearLayout
-            android:layout_weight="3"
+            android:layout_weight="7"
             android:id="@+id/sublinear2"
             android:layout_width="400dp"
-            android:layout_height="80dp"
+            android:layout_height="90dp"
             android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/btnWeather"
+                android:layout_width="0dp"
+                android:background="#AF7507"
+                android:layout_height="90dp"
+                android:layout_weight="2"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Weather" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnCalender"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="날씨" />
+                android:background="#DE6216"
+                android:layout_height="90dp"
+                android:layout_weight="3"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Calender" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnCall"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="학사일정" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="교내 전화번호" />
+                android:background="#480000"
+                android:layout_height="90dp"
+                android:layout_weight="2"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Call" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight="3"
+            android:layout_weight="7"
             android:id="@+id/sublinear3"
             android:layout_width="400dp"
-            android:layout_height="80dp"
+            android:layout_height="90dp"
             android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/btnCampus"
+                android:layout_width="0dp"
+                android:background="#4B2866"
+                android:layout_height="90dp"
+                android:layout_weight="3"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Campus" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnJobInfo"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="건물 위치" />
+                android:background="#AF7507"
+                android:layout_height="90dp"
+                android:layout_weight="2"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Job Info" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnWebMail"
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="취업정보" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="웹메일" />
+                android:background="#DE6216"
+                android:layout_height="90dp"
+                android:layout_weight="2"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:text="Web Mail" />
         </LinearLayout>
-
 
     </LinearLayout>
 

@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".University.UniversityNoticeActivity"></activity>
-        <activity android:name=".Library.LibrarySearchActivity" />
+        <activity android:name=".calender.CalenderActivity"></activity>
+        <activity android:name=".university.UniversityNoticeActivity" />
+        <activity android:name=".library.LibrarySearchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

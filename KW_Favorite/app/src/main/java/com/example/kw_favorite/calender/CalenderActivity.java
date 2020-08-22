@@ -1,4 +1,4 @@
-package com.example.kw_favorite.university;
+package com.example.kw_favorite.calender;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,33 +11,32 @@ import android.webkit.WebViewClient;
 
 import com.example.kw_favorite.R;
 
-public class UniversityNoticeActivity extends AppCompatActivity {
+public class CalenderActivity extends AppCompatActivity {
 
     private WebView webView;
-    private String url = "https://www.kw.ac.kr/ko/index.jsp";
+    private String url = "https://www.kw.ac.kr/ko/life/bachelor_calendar.jsp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_university_notice);
+        setContentView(R.layout.activity_calender);
 
-        Intent intent = getIntent();//Main에서 데이터 넘길 경우 받는다.
-
+        Intent intent = getIntent();
         webView = (WebView)findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl(url);
+        webView.setWebViewClient(new WebViewClient());
         webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebViewClient(new WebViewClientClass());
         //Enable Zoom
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setSupportZoom(true);
         //Adjust Web display
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
-
     }
+
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    public boolean onKeyDown(int keyCode, KeyEvent event){
 
         if((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()){
             webView.goBack();
@@ -46,13 +45,11 @@ public class UniversityNoticeActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    private class WebViewClientClass extends WebViewClient {
+    private class WebViewClientClass extends WebViewClient{
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {//현재 페이지의 url읽어오기
             view.loadUrl(url);
             return true;
         }
     }
-
-
 }
