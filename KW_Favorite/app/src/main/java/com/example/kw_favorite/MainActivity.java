@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.kw_favorite.calender.CalenderActivity;
+import com.example.kw_favorite.campus.CampusActivity;
 import com.example.kw_favorite.library.LibrarySearchActivity;
 import com.example.kw_favorite.university.UniversityNoticeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLibrary, btnUniversityNotice, btnCalender;
+    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnLibrary = findViewById(R.id.btnLibrary);//도서관 버튼 누를 시
         btnUniversityNotice = findViewById(R.id.btnUniversityNotice);   //학교 공지사항 누를 시
         btnCalender = findViewById(R.id.btnCalender);
-
+        btnCampus = findViewById(R.id.btnCampus);
         //도서관
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //캠퍼스
+        btnCampus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CampusActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
