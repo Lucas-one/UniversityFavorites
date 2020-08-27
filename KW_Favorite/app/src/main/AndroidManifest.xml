@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".call.CallActivity"></activity>
         <activity android:name=".calender.CalenderActivity" />
         <activity android:name=".university.UniversityNoticeActivity" />
         <activity android:name=".library.LibrarySearchActivity" />
-        <activity android:name=".campus.CampusActivity"/>
+        <activity android:name=".campus.CampusActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA1PD5AH3kqjNMI6TIhTmwnVw7ZMP1YNw8"/>
+            android:value="AIzaSyA1PD5AH3kqjNMI6TIhTmwnVw7ZMP1YNw8" />
     </application>
 
 </manifest>
