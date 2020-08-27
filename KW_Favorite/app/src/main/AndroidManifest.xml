@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".call.CallActivity"></activity>
+        <activity android:name=".webMail.WebMailActivity"></activity>
+        <activity android:name=".call.CallActivity" />
         <activity android:name=".calender.CalenderActivity" />
         <activity android:name=".university.UniversityNoticeActivity" />
         <activity android:name=".library.LibrarySearchActivity" />

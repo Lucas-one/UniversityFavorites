@@ -13,10 +13,11 @@ import com.example.kw_favorite.call.CallActivity;
 import com.example.kw_favorite.campus.CampusActivity;
 import com.example.kw_favorite.library.LibrarySearchActivity;
 import com.example.kw_favorite.university.UniversityNoticeActivity;
+import com.example.kw_favorite.webMail.WebMailActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall;
+    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall, btnWebMail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnCalender = findViewById(R.id.btnCalender);
         btnCampus = findViewById(R.id.btnCampus);
         btnCall = findViewById(R.id.btnCall);
+        btnWebMail = findViewById(R.id.btnWebMail);
         //도서관
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //웹메일
+        btnWebMail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WebMailActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
