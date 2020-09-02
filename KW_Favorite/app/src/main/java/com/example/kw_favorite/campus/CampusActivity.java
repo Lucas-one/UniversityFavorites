@@ -32,19 +32,56 @@ public class CampusActivity extends AppCompatActivity implements OnMapReadyCallb
     public void onMapReady(GoogleMap googleMap) {
         MarkerOptions markerOptions = new MarkerOptions();
         LatLng location;
-        location = new LatLng(37.619588, 127.059920);//비마관
+
+
+//        location = new LatLng(37.620464, 127.059433);//화도관
+//        markerOptions.title("화도관");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+//
+//        location = new LatLng(37.619012, 127.059056);//옥의관
+//        markerOptions.title("옥의관");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+//
+//        location = new LatLng(37.619265, 127.058372);//복지관
+//        markerOptions.title("복지관");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+//
+//        location = new LatLng(37.619502, 127.057704);//연구관
+//        markerOptions.title("연구관");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+//
+//        location = new LatLng(37.619110, 127.060028);//다산재
+//        markerOptions.title("다산재");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+//
+//        //
+//        location = new LatLng(37.619256, 127.060894);//참빛관
+//        markerOptions.title("참빛관");
+//        //markerOptions.snippet("대학원");
+//        markerOptions.position(location);
+//        googleMap.addMarker(markerOptions);
+
+        location = new LatLng(37.620072, 127.054947);//누리관
+        markerOptions.title("누리관");
+        //markerOptions.snippet("대학원");
+        markerOptions.position(location);
+        googleMap.addMarker(markerOptions);
+
+        location = new LatLng(37.619653, 127.059874);//비마관
         markerOptions.title("비마관");
-        markerOptions.snippet("전자정보공과대학");
+        //markerOptions.snippet("전자정보공과대학");
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
-
-        location = new LatLng(37.620464, 127.059433);//화도관
-        markerOptions.title("화도관");
-        markerOptions.snippet("대학원");
-        markerOptions.position(location);
-        googleMap.addMarker(markerOptions);
-
-
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 17));
 
