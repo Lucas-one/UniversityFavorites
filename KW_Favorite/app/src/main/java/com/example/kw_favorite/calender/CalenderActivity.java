@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.kw_favorite.MainActivity;
 import com.example.kw_favorite.R;
 
 public class CalenderActivity extends AppCompatActivity {
@@ -23,16 +24,7 @@ public class CalenderActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         webView = (WebView)findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(url);
-        webView.setWebViewClient(new WebViewClient());
-        webView.setWebChromeClient(new WebChromeClient());
-        //Enable Zoom
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.getSettings().setSupportZoom(true);
-        //Adjust Web display
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
+        MainActivity.connectSite(webView, url);
     }
 
     @Override

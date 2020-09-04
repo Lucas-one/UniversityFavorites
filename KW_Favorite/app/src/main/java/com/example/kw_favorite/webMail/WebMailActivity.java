@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.kw_favorite.MainActivity;
 import com.example.kw_favorite.R;
 import com.example.kw_favorite.university.UniversityNoticeActivity;
 
@@ -25,16 +26,7 @@ public class WebMailActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         webView = (WebView)findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(url);
-        webView.setWebViewClient(new WebViewClient());
-        webView.setWebChromeClient(new WebChromeClient());
-
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.getSettings().setSupportZoom(true);
-
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
+        MainActivity.connectSite(webView, url);
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event){

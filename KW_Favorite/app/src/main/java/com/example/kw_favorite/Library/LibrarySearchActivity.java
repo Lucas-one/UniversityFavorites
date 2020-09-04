@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.example.kw_favorite.MainActivity;
 import com.example.kw_favorite.R;
 
 public class LibrarySearchActivity extends AppCompatActivity {
@@ -25,16 +26,7 @@ public class LibrarySearchActivity extends AppCompatActivity {
         Intent intent = getIntent();//Main에서 데이터 넘길 경우 받는다.
 
         webView = (WebView)findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(url);
-        webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebViewClient(new WebViewClientClass());
-        //Enable Zoom
-        webView.getSettings().setBuiltInZoomControls(true);
-        webView.getSettings().setSupportZoom(true);
-        //Adjust Web display
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
+        MainActivity.connectSite(webView, url);
     }
 
     @Override

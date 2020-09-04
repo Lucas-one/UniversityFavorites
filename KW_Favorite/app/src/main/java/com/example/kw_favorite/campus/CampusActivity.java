@@ -72,7 +72,7 @@ public class CampusActivity extends AppCompatActivity implements OnMapReadyCallb
 //        googleMap.addMarker(markerOptions);
 
         location = new LatLng(37.620072, 127.054947);//누리관
-        markerOptions.title("누리관");
+        markerOptions.title("광운대(누리관)");
         //markerOptions.snippet("대학원");
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);

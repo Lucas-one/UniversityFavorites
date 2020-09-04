@@ -6,18 +6,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.example.kw_favorite.calender.CalenderActivity;
 import com.example.kw_favorite.call.CallActivity;
 import com.example.kw_favorite.campus.CampusActivity;
+import com.example.kw_favorite.ipp.IppActivity;
 import com.example.kw_favorite.library.LibrarySearchActivity;
 import com.example.kw_favorite.university.UniversityNoticeActivity;
 import com.example.kw_favorite.webMail.WebMailActivity;
 
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall, btnWebMail;
+    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall, btnWebMail, btnIpp;
+
+    public static void connectSite(WebView webView, String url){
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl(url);
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
+
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setSupportZoom(true);
+
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnCampus = findViewById(R.id.btnCampus);
         btnCall = findViewById(R.id.btnCall);
         btnWebMail = findViewById(R.id.btnWebMail);
+        btnIpp = findViewById(R.id.btnIPP);
         //도서관
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, WebMailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //Ipp
+        btnIpp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IppActivity.class);
                 startActivity(intent);
             }
         });
