@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ipp.IppActivity"></activity>
+        <activity android:name=".memo.AddActivity"></activity>
+        <activity android:name=".memo.MemoActivity" />
+        <activity android:name=".ipp.IppActivity" />
         <activity android:name=".webMail.WebMailActivity" />
         <activity android:name=".call.CallActivity" />
         <activity android:name=".calender.CalenderActivity" />

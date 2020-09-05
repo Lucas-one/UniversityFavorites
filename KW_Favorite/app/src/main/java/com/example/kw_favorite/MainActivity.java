@@ -16,13 +16,14 @@ import com.example.kw_favorite.call.CallActivity;
 import com.example.kw_favorite.campus.CampusActivity;
 import com.example.kw_favorite.ipp.IppActivity;
 import com.example.kw_favorite.library.LibrarySearchActivity;
+import com.example.kw_favorite.memo.MemoActivity;
 import com.example.kw_favorite.university.UniversityNoticeActivity;
 import com.example.kw_favorite.webMail.WebMailActivity;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall, btnWebMail, btnIpp;
+    private Button btnLibrary, btnUniversityNotice, btnCalender, btnCampus, btnCall, btnWebMail, btnIpp, btnMemo;
 
     public static void connectSite(WebView webView, String url){
         webView.getSettings().setJavaScriptEnabled(true);
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         btnCall = findViewById(R.id.btnCall);
         btnWebMail = findViewById(R.id.btnWebMail);
         btnIpp = findViewById(R.id.btnIPP);
+        btnMemo = findViewById(R.id.btnMemo);
+
         //도서관
         btnLibrary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +115,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Memo
+        btnMemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(MainActivity.this, MemoActivity.class);
+                startActivity(intent2);
+            }
+        });
     }
 
 }
